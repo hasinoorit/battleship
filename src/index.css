@@ -1,0 +1,82 @@
+:root {
+  --amber: #ffb202;
+  --teal: #20b9a0;
+  --gray: #a6a5a5;
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+}
+header {
+  background: #9595ff;
+  padding: 1rem;
+  font-size: 120%;
+}
+
+main {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.board {
+  display: table;
+  border-collapse: collapse;
+  border: 3px solid var(--amber);
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.row {
+  display: table-row;
+  height: 10%;
+}
+
+.tile {
+  display: table-cell;
+  border: 1px solid var(--gray);
+  width: 10%;
+}
+.tile-img {
+  border: none;
+  width: 100%;
+  max-width: 100%;
+}
+.player-stat {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.player-1,
+.player-2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.player-1 {
+  background: var(--amber);
+}
+.player-2 {
+  background: var(--teal);
+  width: 50%;
+}
+.stats {
+  flex-grow: 1;
+}
+.shipPhoto {
+  max-width: 30%;
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    max-width: 1280px;
+  }
+  main {
+    flex-direction: row-reverse;
+  }
+  .board {
+    width: 60%;
+  }
+}
